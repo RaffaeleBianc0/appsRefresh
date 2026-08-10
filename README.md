@@ -2,15 +2,7 @@
 
 A multithreaded PowerShell script designed to automate bulk software installation and updates on Windows using **Windows Package Manager (`winget`)** driven by a simple CSV manifest.
 
-```text
-                   ___      __            _
- __ _ _ __ _ __ __| _ \___ / _|_ _ ___ __| |_
-/ _` | '_ \ '_ (_-<   / -_)  _| '_/ -_|_-< '  \
-\__,_| .__/ .__/__/_|_\___|_| |_| \___/__/_||_|
-     |_|  |_|
-```
 
----
 
 ## 🌟 Key Features
 
@@ -21,7 +13,7 @@ A multithreaded PowerShell script designed to automate bulk software installatio
 - **Automatic Retry Mechanism**: Handles transient network/installer glitches by automatically retrying failed installations up to a configurable threshold.
 - **Detailed Audit Logging**: Outputs operational events and detailed error stream capture to `appsRefresh.log`.
 
----
+
 
 ## 📋 Requirements
 
@@ -30,7 +22,7 @@ A multithreaded PowerShell script designed to automate bulk software installatio
 * **Windows Package Manager (`winget`)** (installed via *App Installer* from the Microsoft Store)
 * Administrator privileges (the script handles auto-elevation if required)
 
----
+
 
 ## 🚀 Quick Start
 
@@ -66,7 +58,7 @@ Open PowerShell and run the script:
 
 If launched without Administrator privileges, the script will request UAC elevation automatically.
 
----
+
 
 ## ⚙️ Parameters & Usage
 
@@ -75,6 +67,8 @@ If launched without Administrator privileges, the script will request UAC elevat
 | `-CsvPath` | `string` | `. pps.csv` | Path to the target CSV file containing the `AppID` list. |
 | `-CheckWorkers` | `int` | `2` | Number of parallel worker threads used during the check phase. |
 | `-ActionRetries` | `int` | `2` | Number of automatic retries attempted for failed installs/upgrades. |
+
+
 
 ### Examples
 
@@ -93,7 +87,7 @@ If launched without Administrator privileges, the script will request UAC elevat
 . ppsRefresh.ps1 -CsvPath ".\my_apps.csv" -CheckWorkers 4 -ActionRetries 3
 ```
 
----
+
 
 ## 🛠️ How It Works
 
@@ -103,7 +97,7 @@ If launched without Administrator privileges, the script will request UAC elevat
 4. **Live Terminal UI**: Renders a custom live console dashboard showing progress percentages, elapsed time (EL), estimated time remaining (ETA), and active task states.
 5. **Final Summary Report**: Displays a detailed breakdown of results (`Total evaluated`, `Up to date`, `Newly installed`, `Updated`, `Failed`).
 
----
+
 
 ## 🔍 Troubleshooting
 
@@ -117,5 +111,4 @@ If launched without Administrator privileges, the script will request UAC elevat
   ```powershell
   powershell -ExecutionPolicy Bypass -File . ppsRefresh.ps1
   ```
-
----
+  
