@@ -53,7 +53,7 @@ Microsoft.VisualStudioCode
 Open PowerShell and run the script:
 
 ```powershell
-. ppsRefresh.ps1
+.\appsRefresh.ps1
 ```
 
 If launched without Administrator privileges, the script will request UAC elevation automatically.
