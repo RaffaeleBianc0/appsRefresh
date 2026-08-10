@@ -64,7 +64,7 @@ If launched without Administrator privileges, the script will request UAC elevat
 
 | Parameter | Type | Default | Description |
 | :--- | :--- | :--- | :--- |
-| `-CsvPath` | `string` | `. pps.csv` | Path to the target CSV file containing the `AppID` list. |
+| `-CsvPath` | `string` | `.\apps.csv` | Path to the target CSV file containing the `AppID` list. |
 | `-CheckWorkers` | `int` | `2` | Number of parallel worker threads used during the check phase. |
 | `-ActionRetries` | `int` | `2` | Number of automatic retries attempted for failed installs/upgrades. |
 
@@ -74,17 +74,17 @@ If launched without Administrator privileges, the script will request UAC elevat
 
 **Custom CSV Path:**
 ```powershell
-. ppsRefresh.ps1 -CsvPath "C:\Deployment\software.csv"
+.\appsRefresh.ps1 -CsvPath "C:\Deployment\software.csv"
 ```
 
 **Faster Parallel Checks:**
 ```powershell
-. ppsRefresh.ps1 -CheckWorkers 4
+.\appsRefresh.ps1 -CheckWorkers 4
 ```
 
 **Custom Retries & Worker Settings:**
 ```powershell
-. ppsRefresh.ps1 -CsvPath ".\my_apps.csv" -CheckWorkers 4 -ActionRetries 3
+.\appsRefresh.ps1 -CsvPath ".\my_apps.csv" -CheckWorkers 4 -ActionRetries 3
 ```
 
 
@@ -109,6 +109,6 @@ If launched without Administrator privileges, the script will request UAC elevat
 - **Execution Policy Restriction**:
   If script execution is disabled on your system, launch with:
   ```powershell
-  powershell -ExecutionPolicy Bypass -File . ppsRefresh.ps1
+  powershell -ExecutionPolicy Bypass -File .\appsRefresh.ps1
   ```
   
