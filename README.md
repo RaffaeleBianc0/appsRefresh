@@ -2,7 +2,7 @@
 
 A multithreaded PowerShell script designed to automate bulk software installation and updates on Windows using **Windows Package Manager (`winget`)** driven by a simple CSV manifest.
 
-
+<img width="944" height="772" alt="appsRefresh" src="https://github.com/user-attachments/assets/8ce0df17-5081-4a0a-bab9-5c9069616e93" />
 
 ## 🌟 Key Features
 
