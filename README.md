@@ -112,3 +112,5 @@ If launched without Administrator privileges, the script will request UAC elevat
   powershell -ExecutionPolicy Bypass -File .\appsRefresh.ps1
   ```
   
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I5MBHBZ)
